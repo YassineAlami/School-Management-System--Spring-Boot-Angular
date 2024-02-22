@@ -33,8 +33,16 @@ https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/ass
 
 <h3>Student</h3>
 
+Once a student's email is entered during the login phase, the app directs the user to the Student Space, allowing them to view their marks, subjects, and other relevant information.
 
+
+https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/assets/40896739/eb851aea-4aa7-46ac-85bc-ef6df0cbf65f
 
 
 
 <hr>
+
+
+
+
+<h1>WE WILL BE BACK SOON</h1>
