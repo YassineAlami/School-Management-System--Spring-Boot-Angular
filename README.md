@@ -14,7 +14,7 @@ When admins create new students, they are required to enter the name and some pe
 From a dropdown list of existing classes, admins should choose the class to which the newly added student belongs. <br>
 <p>
 <b>Once a student is assigned to a class, the student count for that class is incremented automatically <b><br>
-<p>
+</b>
   
 https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/assets/40896739/2b2bea75-d1c1-4431-a07f-95e25ec52e49
 
