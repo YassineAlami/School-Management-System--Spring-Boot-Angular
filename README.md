@@ -1,5 +1,7 @@
 <h3>This app comprehensively manages school administrative, technical, and functional aspects. It directs administrators and students to their specific spaces, presenting tailored functionalities for each user group, thereby enhancing overall institutional effectiveness </h2>
 
+<hr>
+
 <h2>video simulations</h2>
 <h3>Admins</h3>
 
@@ -20,5 +22,19 @@ From a dropdown list of existing classes, admins should choose the class to whic
 https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/assets/40896739/2b2bea75-d1c1-4431-a07f-95e25ec52e49
 
 
+Adding subjects is as easy as one, two, three, as demonstrated here. To assign a mark to a student, an administrator must first specify the student's class. Subsequently, they can select the student from the second dropdown list specific to that class. The assigned mark must fall between 0 and 20. Optionally, the administrator can add the date of the exam
 
 
+
+https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/assets/40896739/0eae29b8-866f-4d33-bdfa-2df75290a73f
+
+
+<hr>
+
+h3>Student</h3>
+
+
+
+
+
+<hr>
