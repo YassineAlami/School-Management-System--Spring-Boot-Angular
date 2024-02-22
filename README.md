@@ -31,7 +31,7 @@ https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/ass
 
 <hr>
 
-h3>Student</h3>
+<h3>Student</h3>
 
 
 
