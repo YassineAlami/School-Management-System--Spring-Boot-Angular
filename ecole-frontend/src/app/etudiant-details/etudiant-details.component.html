@@ -1,0 +1,46 @@
+<div class="container">
+<h3> View Matiere Details</h3>
+<div>
+  <div>
+    <label> <b> Nom </b></label> {{etudiant.nom}}
+  </div>
+  <div>
+    <label> <b> Prenom </b></label> {{etudiant.prenom}}
+  </div>
+  <div>
+    <label> <b> Classe </b></label> {{etudiant.classe?.nom || 'Pas Encore Désigné'}}
+  </div>
+  <div>
+    <label> <b> Genre </b></label> {{etudiant.genre}}
+  </div>
+  <div>
+    <label> <b> Date de Naissance </b></label> {{etudiant.dateNaissance}}
+  </div>
+  <div>
+    <label> <b> Email </b></label> {{etudiant.email}}
+  </div>
+</div>
+
+
+<table class="table table-striped" style="margin-top: 30px">
+  <thead>
+  <tr>
+    <th>Matiere</th>
+    <th>Note</th>
+    <th>Date</th>
+    <!--<th>Date de Naissance</th>-->
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let note of notes ">
+    <td>{{note.matiere.nom}}</td>
+    <td>{{note.valeur}}</td>
+    <td>{{etudiant.dateNaissance}}</td>
+    <p>Note Date: {{ note.noteDate | date: 'yyyy-MM-dd' }}</p>
+
+    <!--<td>{{etudiant.classe?.nom || 'Pas Encore Désigné'}}</td>-->
+
+  </tr>
+  </tbody>
+</table>
+</div>>

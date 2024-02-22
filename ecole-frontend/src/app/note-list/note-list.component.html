@@ -1,0 +1,31 @@
+<div class="container">
+<h2>Liste des Notes </h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+<!--    <th>Id</th>-->
+    <th>Etudiant</th>
+    <th>Classe</th>
+    <th>Matiere</th>
+    <th>Note</th>
+    <th>Date</th>
+    <th *ngIf="autheService.hasRole('ADMIN')">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let note of notes">
+<!--    <td>{{note.id}}</td>-->
+    <td>{{note.etudiant.nom}}</td>
+    <td>{{note.etudiant.classe.nom}}</td>
+    <td>{{note.matiere.nom}}</td>
+    <td>{{note.valeur}}</td>
+    <td>{{note?.noteDate || "no date"}}</td>
+    <td>
+      <button (click)="updateNote(note.id)" class="btn btn-info"> Update</button>
+      <button (click)="deleteNote(note.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+      <button (click)="noteDetails(note.id)" class="btn btn-secondary" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>

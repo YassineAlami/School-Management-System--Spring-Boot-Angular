@@ -1,0 +1,44 @@
+<div class="container">
+<h3> Classe Details</h3>
+<div>
+  <div>
+    <label> <b> ID: </b></label> {{classe.id}}
+  </div>
+</div>
+
+<div>
+  <div>
+    <label> <b> Nom: </b></label> {{classe.nom}}
+  </div>
+</div>
+
+<div>
+  <div>
+    <label> <b> Capacite: </b></label> {{classe.capacite}}
+  </div>
+</div>
+
+<div>
+  <div>
+    <label> <b> Annee Scolaire: </b></label> {{classe.anneeScolaire}}
+  </div>
+</div>
+
+
+<div>
+  <div>
+    <label> <b> Enseignant Principal: </b></label> {{"Enseignant Principal"}}
+  </div>
+</div>
+
+
+<!-- Display the list of students -->
+<div>
+  <h4>Liste des Étudiants</h4>
+  <ul>
+    <li *ngFor="let etudiant of classe.etudiants">
+      {{ etudiant.nom }} {{ etudiant.prenom }}
+    </li>
+  </ul>
+</div>
+</div>

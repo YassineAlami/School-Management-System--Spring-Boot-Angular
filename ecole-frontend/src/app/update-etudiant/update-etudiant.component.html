@@ -1,0 +1,47 @@
+<div class="col-md-6 offset-md-3">
+  <h3> Update Etudiant </h3>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label> Nom</label>
+      <input type="text" class ="form-control" id = "Nom"
+             [(ngModel)] = "etudiant.nom" name = "Nom">
+    </div>
+
+    <div class="form-group">
+      <label> Prenom</label>
+      <input type="text" class ="form-control" id = "Prenom"
+             [(ngModel)] = "etudiant.prenom" name = "Prenom">
+    </div>
+
+    <div class="form-group">
+      <label> Genre</label>
+      <select [(ngModel)] = "etudiant.genre" class="form-control"  name="Genre1">
+        <option  [value]="'M'">M</option>
+        <option  [value]="'F'">F</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label> Date de Naissance</label>
+      <input type="text" class ="form-control" id = "DateNaissance"
+             [(ngModel)] = "etudiant.dateNaissance" name = "DateNaissance">
+    </div>
+
+    <div class="form-group">
+      <label> Email</label>
+      <input type="text" class ="form-control" id = "Email"
+             [(ngModel)] = "etudiant.email" name = "Email">
+    </div>
+
+    <div class="form-group">
+      <label> Classes</label>
+      <select class="form-control" [(ngModel)]="etudiant.classe.id" name="classeId">
+        <option *ngFor="let classe of classes" [value]="classe.id">{{ classe.nom }} {{"("+classe.capacite+" Étudiants)"}}</option>
+      </select>
+    </div>
+
+    <button class = "btn btn-success" type ="submit">Submit</button>
+
+  </form>
+</div>

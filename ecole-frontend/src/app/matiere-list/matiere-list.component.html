@@ -1,0 +1,23 @@
+<div class="container">
+<h2>Liste des Matieres </h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th *ngIf="autheService.hasRole('ADMIN')">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let matiere of matieres">
+      <td>{{matiere.id}}</td>
+      <td>{{matiere.nom}}</td>
+      <td>
+        <button (click)="updatematiere(matiere.id)" class="btn btn-info"> Update</button>
+        <button (click)="deletematiere(matiere.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+        <button (click)="matiereDetails(matiere.id)" class="btn btn-secondary" style="margin-left: 10px"> View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

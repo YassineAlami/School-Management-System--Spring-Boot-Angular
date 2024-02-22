@@ -1,0 +1,115 @@
+<!-- Top neon line container -->
+<div class="neon-line top"></div>
+
+<!-- Rest of your page content goes here -->
+<div class="container mt-5">
+</div>
+
+
+
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark" >
+  <a class="navbar-brand" href="#">Lycée ISGA</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+
+
+     <!-- <div class="dropdown">
+        <a class="nav-link" routerLink="matieres" routerLinkActive="active">Matieres</a>
+      </div>
+      <li class="nav-item">
+        <a *ngIf="autheService.hasRole('ADMIN')" class="nav-link" routerLink="create-matiere" routerLinkActive="active">Ajouter Matiere</a>
+      </li>-->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="matieresDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Matieres
+        </a>
+        <div class="dropdown-menu" aria-labelledby="matieresDropdown">
+          <a class="dropdown-item" routerLink="matieres" routerLinkActive="active">View Matieres</a>
+          <a *ngIf="autheService.hasRole('ADMIN')" class="dropdown-item" routerLink="create-matiere" routerLinkActive="active">Add Matiere</a>
+        </div>
+      </li>
+
+
+     <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="classes" routerLinkActive="active">Classes</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="autheService.hasRole('ADMIN')" class="nav-link" routerLink="create-classe" routerLinkActive="active">Ajouter Classe</a>
+      </li>-->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="classesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Classes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="classesDropdown">
+          <a class="dropdown-item" routerLink="classes" routerLinkActive="active">View Classes</a>
+          <a *ngIf="autheService.hasRole('ADMIN')" class="dropdown-item" routerLink="create-classe" routerLinkActive="active">Add Classe</a>
+        </div>
+      </li>
+
+      <!--<li class="nav-item">
+        <a class="nav-link" routerLink="notes" routerLinkActive="active">Notes</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="autheService.hasRole('ADMIN')" class="nav-link" routerLink="create-note" routerLinkActive="active">Ajouter Notes</a>
+      </li>-->
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="noteDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Note
+        </a>
+        <div class="dropdown-menu" aria-labelledby="noteDropdown">
+          <a class="dropdown-item" routerLink="notes" routerLinkActive="active">View Notes</a>
+          <a *ngIf="autheService.hasRole('ADMIN')" class="dropdown-item" routerLink="create-note" routerLinkActive="active">Add Note</a>
+        </div>
+      </li>
+
+
+     <!-- <li class="nav-item">
+        <a class="nav-link" routerLink="etudiants" routerLinkActive="active">Etudiant</a>
+      </li>
+      <li class="nav-item">
+        <a *ngIf="autheService.hasRole('ADMIN')" class="nav-link" routerLink="create-etudiant" routerLinkActive="active">Ajouter Etudiant</a>
+      </li>-->
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="etudiantDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Etudiant
+        </a>
+        <div class="dropdown-menu" aria-labelledby="etudiantDropdown">
+          <a class="dropdown-item" routerLink="etudiants" routerLinkActive="active">View Etudiants</a>
+          <a *ngIf="autheService.hasRole('ADMIN')" class="dropdown-item" routerLink="create-etudiant" routerLinkActive="active">Add Etudiant</a>
+        </div>
+      </li>
+
+
+      <ul class="navbar-nav">
+        <li>
+          <a class="nav-link ">
+            {{authService.authenticatedUser!.username}}
+          </a>
+        </li>
+        <li>
+          <a class="btn nav-link">
+            <i class="bi bi-box-arrow-right" (click)="handleLogout()"></i>
+          </a>
+        </li>
+      </ul>
+
+
+      <!-- Add more top navigation items here if needed -->
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  margin: 0;
+  padding: 0;
+}
+/* Custom CSS for the neon lines */
+.neon-line {
+  position: absolute; /* Change to absolute */
+  width: 100%;
+  height: 20px;
+  box-shadow: 0px 2px 5px rgb(255, 156, 156); /* Neon glow effect in red */
+}
+
+.neon-line.top {
+  top: 0;
+  background-color: #ff8080; /* Neon red color */
+  border-top: 1px solid #fda8a8; /* Same neon red color */
+}
+
+/* Adjust margin or padding for the content container */
+.content-container {
+  margin-top: 5px; /* Adjust as needed to control the space between neon line and content */
+}

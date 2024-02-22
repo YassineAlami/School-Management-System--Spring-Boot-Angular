@@ -1,0 +1,32 @@
+<div class="container">
+<h2>Liste des Etudiants </h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <!--<th>Id</th>-->
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Classe</th>
+    <th>Genre</th>
+    <th>Email</th>
+    <th>Date de Naissance</th>
+    <th *ngIf="autheService.hasRole('ADMIN')">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let etudiant of etudiants">
+    <!--<td>{{etudiant.id}}</td>-->
+    <td>{{etudiant.nom}} </td>
+    <td>{{etudiant.prenom}}</td>
+    <td>{{etudiant.classe?.nom || 'Pas Encore Désigné'}}</td>
+    <td>{{etudiant.genre}}</td>
+    <td>{{etudiant.email}}</td>
+    <td>{{etudiant.dateNaissance}}</td>
+    <td>
+      <button (click)="updateEtudiant(etudiant.id)" class="btn btn-info"> Update</button>
+      <button (click)="deleteEtudiant(etudiant.id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+      <button (click)="etudiantDetails(etudiant.id)" class="btn btn-secondary" style="margin-left: 10px"> View</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

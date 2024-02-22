@@ -1,0 +1,54 @@
+<div class="col-md-6 offset-md-3">
+  <h3> Affecter une Note </h3>
+  <form (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+      <label> Classe</label>
+      <select class="form-control" [(ngModel)]="selectedClass" name="classeId" (ngModelChange)="onClassSelect(selectedClass)">
+        <option *ngFor="let classe of classes" [ngValue]="classe">{{ classe.nom }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label> Etudiant</label>
+      <select class="form-control" [(ngModel)]="note.etudiant" name="etudiantId">
+        <option *ngFor="let etudiant of filteredStudents" [ngValue]="etudiant">{{ etudiant.nom }} {{ etudiant.prenom }}</option>
+      </select>
+    </div>
+
+    <!--<div class="form-group">
+      <label> Classe</label>
+      <select class="form-control" [(ngModel)]="note.etudiant.classe.id" name="classeId" >
+        <option *ngFor="let classe of classes" [value]="classe.id">{{ classe.nom }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label> Etudiant</label>
+      <select class="form-control" [(ngModel)]="note.etudiant.id" name="etudiantId">
+        <option *ngFor="let etudiant of etudiants" [value]="etudiant.id">{{ etudiant.nom }} {{ etudiant.prenom }}</option>
+      </select>
+    </div>-->
+
+    <div class="form-group">
+      <label> Matiere</label>
+      <select class="form-control" [(ngModel)]="note.matiere.id" name="matiereId">
+        <option *ngFor="let matiere of matieres" [value]="matiere.id">{{ matiere.nom }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label> Note</label>
+      <input type="text" class="form-control" id="Valeur" [(ngModel)]="note.valeur" name="valeur">
+    </div>
+
+    <div class="form-group">
+      <label> Date de Naissance</label>
+      <input type="text" class ="form-control" id = "DateNaissance"
+             [(ngModel)] = "note.noteDate" name = "DateNaissance">
+    </div>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+</div>
