@@ -12,7 +12,7 @@ https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/ass
 
 When admins create new students, they are required to enter the name and some personal information. A minor constraint is that the email must be unique. <br>
 From a dropdown list of existing classes, admins should choose the class to which the newly added student belongs. <br>
-<p style="color:navy">
+<p style="color=navy">
 <b>Once a student is assigned to a class, the student count for that class is incremented automatically <b><br>
 </b>
   
