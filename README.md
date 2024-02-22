@@ -43,6 +43,8 @@ https://github.com/YassineAlami/School-Management-System-Spring-Boot-Angular/ass
 <hr>
 
 
+<div>
+  <h1>WE WILL BE BACK SOON</h1>
+</div>
 
 
-<h1>WE WILL BE BACK SOON</h1>
